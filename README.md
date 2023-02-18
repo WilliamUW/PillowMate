@@ -1,1 +1,1 @@
-# iPillow
+# PillowMate
