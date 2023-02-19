@@ -3,13 +3,18 @@ import RPi.GPIO as GPIO
 import time
 import board
 import adafruit_dht
+from datetime import datetime
 
 def reed_triggered(channel):
-    print(channel)
+    with open("Awake.log","a") as af:
+        af.write(str(datetime.now()))
 
 def get_reed():
-    RawValue = 0
-    return 9
+    # RawValue = 0
+    GPIO.setmode(GPIO.BCM)
+    GPIO.setup(common.REED_SENSOR, GPIO.IN)
+    # RawValue = GPIO.input(common.REED_SENSOR)
+
     try:
         RawValue = GPIO.input(common.REED_SENSOR)
     except KeyboardInterrupt:
