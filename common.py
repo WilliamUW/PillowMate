@@ -1,0 +1,7 @@
+TEMP_SENSOR = 25 #D24 
+REED_SENSOR = 20 #D20
+BTN_SENSOR = 24
+# DELAY = 60
+#debug only 
+DELAY = 1
+
